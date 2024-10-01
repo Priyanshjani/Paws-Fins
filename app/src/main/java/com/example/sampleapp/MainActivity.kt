@@ -14,12 +14,15 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             val navController = rememberNavController()
-            NavHost(navController = navController,"LogInScreen") {
+            NavHost(navController = navController,"Home") {
                 composable("LogInScreen"){
                     LogInScreen(navController)
                 }
                 composable("SignUpScreen"){
                     SignUpScreen(navController)
+                }
+                composable("Home"){
+                    Home(navController)
                 }
             }
         }
